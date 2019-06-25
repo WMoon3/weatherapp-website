@@ -16,7 +16,7 @@ const forecast = (lat, lng, callback) => {
         } else if (b.error) {
             callback('Unable to get forecast for this location..', undefined)
         } else {
-            callback(undefined, b.daily.data[0].summary + ' It is currently ' + curr.temperature + ' degrees out. There is a ' + curr.precipProbability + '% chance of rain.')
+            callback(undefined, 'Low ' + b.daily.data[0].temperatureLow + 'F, high ' + b.daily.data[0].temperatureHigh + 'F. ' + b.daily.data[0].summary + ' It is currently ' + curr.temperature + ' degrees out. There is a ' + curr.precipProbability + '% chance of rain.')
         }
     })
 
