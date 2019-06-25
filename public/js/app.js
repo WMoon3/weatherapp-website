@@ -12,7 +12,7 @@ document.querySelector('form').addEventListener('submit', (event) => {
     msgOne.textContent = 'Loading forecast data...'
     msgTwo.textContent = ''
     
-    fetch('http://localhost:3000/forecast?address=' + location)
+    fetch('/forecast?address=' + location)
     .then((response) => {
         if (!response.ok) {
             throw Error(response.statusText)
